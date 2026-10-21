@@ -1,11 +1,10 @@
 import axios from 'axios';
 
 export const fetchData = async () => {
-  const apiUrl = import.meta.env.VITE_API_URL;
-
-  if (!apiUrl) {
-    throw new Error('Falta la variable de entorno VITE_API_URL');
-  }
+  // En producción con Netlify usamos la función serverless. En desarrollo usamos la URL directa o la variable de entorno.
+  const apiUrl = import.meta.env.DEV
+    ? (import.meta.env.VITE_API_URL || 'https://www.freetogame.com/api/games')
+    : '/.netlify/functions/games';
 
   const response = await axios.get(apiUrl);
 
