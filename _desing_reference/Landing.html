@@ -1,260 +1,462 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GLITCH_CORE - The Next Generation of Gaming</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Sora:wght@700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-container": "#004965",
-                        "on-surface-variant": "#bdc8d1",
-                        "on-surface": "#d4e4fa",
-                        "primary-fixed": "#c4e7ff",
-                        "error": "#ffb4ab",
-                        "on-primary-fixed-variant": "#004c69",
-                        "outline-variant": "#3e484f",
-                        "surface-container-low": "#0d1c2d",
-                        "surface-container-high": "#1c2b3c",
-                        "on-error": "#690005",
-                        "on-primary": "#00354a",
-                        "secondary-container": "#3e495d",
-                        "on-tertiary": "#283044",
-                        "surface": "#051424",
-                        "inverse-on-surface": "#233143",
-                        "inverse-surface": "#d4e4fa",
-                        "on-background": "#d4e4fa",
-                        "on-tertiary-container": "#3c4459",
-                        "secondary-fixed-dim": "#bcc7de",
-                        "primary": "#8ed5ff",
-                        "on-error-container": "#ffdad6",
-                        "tertiary-fixed": "#dae2fd",
-                        "primary-fixed-dim": "#7bd0ff",
-                        "surface-variant": "#273647",
-                        "on-secondary-fixed": "#111c2d",
-                        "background": "#051424",
-                        "surface-container-lowest": "#010f1f",
-                        "secondary-fixed": "#d8e3fb",
-                        "inverse-primary": "#00668a",
-                        "surface-container-highest": "#273647",
-                        "on-primary-fixed": "#001e2c",
-                        "surface-dim": "#051424",
-                        "outline": "#87929a",
-                        "primary-container": "#38bdf8",
-                        "on-secondary-container": "#aeb9d0",
-                        "secondary": "#bcc7de",
-                        "surface-bright": "#2c3a4c",
-                        "on-secondary": "#263143",
-                        "on-secondary-fixed-variant": "#3c475a",
-                        "error-container": "#93000a",
-                        "surface-container": "#122131",
-                        "surface-tint": "#7bd0ff",
-                        "on-tertiary-fixed-variant": "#3f465c",
-                        "tertiary": "#c5cce6",
-                        "on-tertiary-fixed": "#131b2e",
-                        "tertiary-fixed-dim": "#bec6e0",
-                        "tertiary-container": "#a9b1ca"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "md": "16px",
-                        "margin-desktop": "48px",
-                        "base": "4px",
-                        "xl": "40px",
-                        "xs": "4px",
-                        "gutter": "20px",
-                        "lg": "24px",
-                        "margin-mobile": "16px",
-                        "sm": "8px"
-                    },
-                    "fontFamily": {
-                        "body-lg": ["Hanken Grotesk"],
-                        "body-md": ["Hanken Grotesk"],
-                        "label-sm": ["JetBrains Mono"],
-                        "headline-md": ["Sora"],
-                        "display-lg-mobile": ["Sora"],
-                        "display-lg": ["Sora"]
-                    },
-                    "fontSize": {
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
-                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
-                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
-                    }
-                },
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GLITCH_CORE - The Next Generation of Gaming</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Sora:wght@700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#004965",
+              "on-surface-variant": "#bdc8d1",
+              "on-surface": "#d4e4fa",
+              "primary-fixed": "#c4e7ff",
+              error: "#ffb4ab",
+              "on-primary-fixed-variant": "#004c69",
+              "outline-variant": "#3e484f",
+              "surface-container-low": "#0d1c2d",
+              "surface-container-high": "#1c2b3c",
+              "on-error": "#690005",
+              "on-primary": "#00354a",
+              "secondary-container": "#3e495d",
+              "on-tertiary": "#283044",
+              surface: "#051424",
+              "inverse-on-surface": "#233143",
+              "inverse-surface": "#d4e4fa",
+              "on-background": "#d4e4fa",
+              "on-tertiary-container": "#3c4459",
+              "secondary-fixed-dim": "#bcc7de",
+              primary: "#8ed5ff",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed": "#dae2fd",
+              "primary-fixed-dim": "#7bd0ff",
+              "surface-variant": "#273647",
+              "on-secondary-fixed": "#111c2d",
+              background: "#051424",
+              "surface-container-lowest": "#010f1f",
+              "secondary-fixed": "#d8e3fb",
+              "inverse-primary": "#00668a",
+              "surface-container-highest": "#273647",
+              "on-primary-fixed": "#001e2c",
+              "surface-dim": "#051424",
+              outline: "#87929a",
+              "primary-container": "#38bdf8",
+              "on-secondary-container": "#aeb9d0",
+              secondary: "#bcc7de",
+              "surface-bright": "#2c3a4c",
+              "on-secondary": "#263143",
+              "on-secondary-fixed-variant": "#3c475a",
+              "error-container": "#93000a",
+              "surface-container": "#122131",
+              "surface-tint": "#7bd0ff",
+              "on-tertiary-fixed-variant": "#3f465c",
+              tertiary: "#c5cce6",
+              "on-tertiary-fixed": "#131b2e",
+              "tertiary-fixed-dim": "#bec6e0",
+              "tertiary-container": "#a9b1ca",
             },
-        }
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              md: "16px",
+              "margin-desktop": "48px",
+              base: "4px",
+              xl: "40px",
+              xs: "4px",
+              gutter: "20px",
+              lg: "24px",
+              "margin-mobile": "16px",
+              sm: "8px",
+            },
+            fontFamily: {
+              "body-lg": ["Hanken Grotesk"],
+              "body-md": ["Hanken Grotesk"],
+              "label-sm": ["JetBrains Mono"],
+              "headline-md": ["Sora"],
+              "display-lg-mobile": ["Sora"],
+              "display-lg": ["Sora"],
+            },
+            fontSize: {
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "700" },
+              ],
+              "display-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "800",
+                },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+            },
+          },
+        },
+      };
     </script>
-<style>
-        html { scroll-behavior: smooth; }
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid #334155;
-        }
-        .neon-glow:hover {
-            box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
-        }
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .glass-panel {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid #334155;
+      }
+      .neon-glow:hover {
+        box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+      }
     </style>
-</head>
-<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
-<!-- Navigation Bar (TopNavBar) -->
-<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md border-b border-outline-variant/30 shadow-none transition-all duration-300" id="main-nav">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-md max-w-360 mx-auto">
-<a class="font-display-lg-mobile text-display-lg-mobile font-black tracking-tighter text-primary" href="#">
-                GLITCH_CORE
-            </a>
-<div class="hidden md:flex gap-lg items-center">
-<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300" href="#catalog">Catalog</a>
-<a class="text-on-surface-variant font-medium font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300" href="#">New Releases</a>
-<a class="text-on-surface-variant font-medium font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300" href="#">Deals</a>
-<a class="text-on-surface-variant font-medium font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300" href="#">Platforms</a>
-</div>
-<div class="flex items-center gap-md">
-<div class="relative hidden md:block">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
-<input class="bg-tertiary-fixed text-on-tertiary-fixed border-outline-variant rounded-full py-2 pl-10 pr-4 focus:border-primary-container focus:ring-1 focus:ring-primary-container text-sm w-48 transition-all glass-panel" placeholder="Search..." type="text"/>
-</div>
-<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] transition-all hover:scale-105">
-                    Ingresar
-                </button>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative w-full h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Hero Background" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlwr4lJR90S1-ifDto4HkBXwqW9ogAPnq4b0Lg046gpT3y7NpfvGy84q8vADsNBmwz61nk2MHHIsLdQhWCaWdFROqduwmzFwqZVz-lTNvxklVBhHZqMG2dUxgLIlPleGBLwpNhzF9ysSa3K5L2po9hjgsvlhEwJNVrUMnb_cPKqYg3Mi7qbsawPgTJwj-3cd9XwAgGjh2QsPBoH_VXBfBx4zShE5fT9DGBkmS8_30SEjzuefMazV5y0g"/>
-<div class="absolute inset-0 bg-linear-to-b from-background/80 via-background/60 to-background"></div>
-</div>
-<div class="relative z-10 text-center px-margin-mobile flex flex-col items-center">
-<h1 class="font-display-lg md:text-[80px] text-display-lg-mobile font-black tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-fixed drop-shadow-[0_0_20px_rgba(56,189,248,0.5)] mb-md">
-                GLITCH_CORE
-            </h1>
-<p class="font-headline-md text-headline-md text-on-surface mb-xl max-w-2xl">
-                The Next Generation of Gaming
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- Navigation Bar (TopNavBar) -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md border-b border-outline-variant/30 shadow-none transition-all duration-300"
+      id="main-nav"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-md max-w-360 mx-auto"
+      >
+        <a
+          class="font-display-lg-mobile text-display-lg-mobile font-black tracking-tighter text-primary"
+          href="#"
+        >
+          GLITCH_CORE
+        </a>
+        <div class="hidden md:flex gap-lg items-center">
+          <a
+            class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300"
+            href="#catalog"
+            >Catalog</a
+          >
+          <a
+            class="text-on-surface-variant font-medium font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300"
+            href="#"
+            >New Releases</a
+            >
+            <a
+              class="text-on-surface-variant font-medium font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300"
+              href="#"
+              >Deals</a
+            >
+          <a
+          class="text-on-surface-variant font-medium font-body-md text-body-md active:scale-95 transition-transform hover:text-primary hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] duration-300"
+            href="#"
+            >Platforms</a
+          >
+        </div>
+        <div class="flex items-center gap-md">
+          <div class="relative hidden md:block">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline"
+              >search</span
+            >
+            <input
+              class="bg-tertiary-fixed text-on-tertiary-fixed border-outline-variant rounded-full py-2 pl-10 pr-4 focus:border-primary-container focus:ring-1 focus:ring-primary-container text-sm w-48 transition-all glass-panel"
+              placeholder="Search..."
+              type="text"
+            />
+          </div>
+          <button
+            class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.3)] transition-all hover:scale-105"
+            >
+            Ingresar
+        </button>
+    </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <header
+      class="relative w-full h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Hero Background"
+          class="w-full h-full object-cover object-center"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlwr4lJR90S1-ifDto4HkBXwqW9ogAPnq4b0Lg046gpT3y7NpfvGy84q8vADsNBmwz61nk2MHHIsLdQhWCaWdFROqduwmzFwqZVz-lTNvxklVBhHZqMG2dUxgLIlPleGBLwpNhzF9ysSa3K5L2po9hjgsvlhEwJNVrUMnb_cPKqYg3Mi7qbsawPgTJwj-3cd9XwAgGjh2QsPBoH_VXBfBx4zShE5fT9DGBkmS8_30SEjzuefMazV5y0g"
+        />
+        <div
+          class="absolute inset-0 bg-linear-to-b from-background/80 via-background/60 to-background"
+        ></div>
+      </div>
+      <div
+        class="relative z-10 text-center px-margin-mobile flex flex-col items-center"
+      >
+        <h1
+          class="font-display-lg md:text-[80px] text-display-lg-mobile font-black tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-fixed drop-shadow-[0_0_20px_rgba(56,189,248,0.5)] mb-md"
+        >
+          GLITCH_CORE
+        </h1>
+        <p
+          class="font-headline-md text-headline-md text-on-surface mb-xl max-w-2xl"
+        >
+          The Next Generation of Gaming
+        </p>
+        <a
+          class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-bold text-lg hover:drop-shadow-[0_0_24px_rgba(56,189,248,0.6)] transition-all hover:scale-105 flex items-center gap-2"
+          href="#catalog"
+        >
+          Ingresar
+          <span class="material-symbols-outlined">arrow_downward</span>
+        </a>
+      </div>
+    </header>
+    <!-- Catalog Section -->
+    <main
+      class="w-full max-w-360 mx-auto px-margin-mobile md:px-margin-desktop py-xl min-h-screen"
+      id="catalog"
+    >
+      <div class="flex justify-between items-end mb-lg">
+        <div>
+          <h2
+            class="font-headline-md text-headline-md font-bold text-on-surface"
+          >
+            Catalog
+          </h2>
+          <p class="text-on-surface-variant font-body-md mt-sm">
+            Explore our curated collection.
+          </p>
+        </div>
+        <div class="flex gap-sm">
+          <button
+            class="glass-panel px-4 py-2 rounded-md hover:border-primary-container transition-colors text-sm"
+          >
+            Filter
+          </button>
+          <button
+            class="glass-panel px-4 py-2 rounded-md hover:border-primary-container transition-colors text-sm"
+          >
+            Sort
+          </button>
+        </div>
+      </div>
+      <!-- Grid Container -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <!-- Game Card 1 -->
+        <article
+          class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col"
+        >
+          <div class="relative aspect-video overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="A highly detailed cinematic shot of a futuristic cyberpunk city at night, neon lights reflecting on wet pavement. Dark, moody atmosphere with vibrant blue and cyan accents, high-end 3d render style, hyper-realistic textures, volumetric lighting, epic scale, deep shadows and glowing holographic signs."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMa_TImQvLamWWvxYKVzhTavMOM9Fa-HBJZGXXgWIyDRabDdIg2oJlbGIhqTz1aD54ue11btwr-Xsfc3ZYnunisAy57tQetEkEs5vVVu9g-IgR765IZrXmEYenxWAan4LJuW1-SoCK8UIPbG4db4V_W8Dbb8WEXO7JKvM2MKyJsoF6VGyfBJRIXnuJvctZW23ECUVY1Mr6dv6inBXwRkTD75kCj1pLOQE5hy08vi4_mf22mKam2_53Cg"
+            />
+            <div
+              class="absolute top-sm right-sm bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold border border-outline-variant"
+            >
+              $59.99
+            </div>
+          </div>
+          <div class="p-md flex-1 flex flex-col">
+            <div class="flex gap-2 mb-sm flex-wrap">
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >ACTION</span
+              >
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >PC</span
+              >
+            </div>
+            <h3
+              class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors"
+            >
+              Neon Protocol
+            </h3>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">
+              Infiltrate the megacorp servers in this fast-paced stealth action
+              RPG set in a dystopian future.
             </p>
-<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-bold text-lg hover:drop-shadow-[0_0_24px_rgba(56,189,248,0.6)] transition-all hover:scale-105 flex items-center gap-2" href="#catalog">
-                Ingresar
-                <span class="material-symbols-outlined">arrow_downward</span>
-</a>
-</div>
-</header>
-<!-- Catalog Section -->
-<main class="w-full max-w-360 mx-auto px-margin-mobile md:px-margin-desktop py-xl min-h-screen" id="catalog">
-<div class="flex justify-between items-end mb-lg">
-<div>
-<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Catalog</h2>
-<p class="text-on-surface-variant font-body-md mt-sm">Explore our curated collection.</p>
-</div>
-<div class="flex gap-sm">
-<button class="glass-panel px-4 py-2 rounded-md hover:border-primary-container transition-colors text-sm">Filter</button>
-<button class="glass-panel px-4 py-2 rounded-md hover:border-primary-container transition-colors text-sm">Sort</button>
-</div>
-</div>
-<!-- Grid Container -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Game Card 1 -->
-<article class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col">
-<div class="relative aspect-video overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A highly detailed cinematic shot of a futuristic cyberpunk city at night, neon lights reflecting on wet pavement. Dark, moody atmosphere with vibrant blue and cyan accents, high-end 3d render style, hyper-realistic textures, volumetric lighting, epic scale, deep shadows and glowing holographic signs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMa_TImQvLamWWvxYKVzhTavMOM9Fa-HBJZGXXgWIyDRabDdIg2oJlbGIhqTz1aD54ue11btwr-Xsfc3ZYnunisAy57tQetEkEs5vVVu9g-IgR765IZrXmEYenxWAan4LJuW1-SoCK8UIPbG4db4V_W8Dbb8WEXO7JKvM2MKyJsoF6VGyfBJRIXnuJvctZW23ECUVY1Mr6dv6inBXwRkTD75kCj1pLOQE5hy08vi4_mf22mKam2_53Cg"/>
-<div class="absolute top-sm right-sm bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold border border-outline-variant">
-                        $59.99
-                    </div>
-</div>
-<div class="p-md flex-1 flex flex-col">
-<div class="flex gap-2 mb-sm flex-wrap">
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">ACTION</span>
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">PC</span>
-</div>
-<h3 class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors">Neon Protocol</h3>
-<p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">Infiltrate the megacorp servers in this fast-paced stealth action RPG set in a dystopian future.</p>
-</div>
-</article>
-<!-- Game Card 2 -->
-<article class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col">
-<div class="relative aspect-video overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sprawling alien landscape with monolithic ancient ruins, glowing energy lines cutting through the dark rock. Atmospheric mist rolling over the terrain, dramatic lighting from a distant twin suns, epic sci-fi exploration mood, detailed surface textures, moody and cinematic composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSDueuOFJfsZb4OqwYI8NunUu1DQ5Zc0Cx_b8qMThnqzRaXHPKJDJVgeuTIHdJgXThy7aPPxEl7SLtsjrEUNSkPNdyPtwLjf-9_DOxBD1NQ6cbpQwvVqPTunwumm3Vca-CC0oGNUxb6kmKv61r8LZUdmPiowjdKfl2zaIKQ8-OrmARVyBHQsgLp5ypahm4L_AgS48kskKar5UuL3LWyHAsyi6QUiYWSza-XNFi93w1GPEvJL-oVgJ8eg"/>
-</div>
-<div class="p-md flex-1 flex flex-col">
-<div class="flex gap-2 mb-sm flex-wrap">
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">RPG</span>
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">CONSOLE</span>
-</div>
-<h3 class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors">Echoes of Aethel</h3>
-<p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">Discover the lost secrets of an ancient civilization in this sprawling open-world adventure.</p>
-</div>
-</article>
-<!-- Game Card 3 -->
-<article class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col">
-<div class="relative aspect-video overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Intense first-person view of a futuristic space battle from inside a sleek cockpit. Glowing HUD elements in cyan and blue, dark space background with stars, dynamic motion blur, high-tech controls, immersive action-packed aesthetic, detailed mechanical design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFcGp96LTnDQN7cUFvl5WX3Pfzbs3dKYFs89h4bzQPi67lxvttNKKUeMJ4EaEZ-mO5UWwag4wenFjPXqiVso71hUbjGVNz-lvVezsGUn_Xv0mK-Ai10Uf0yCAgVriliG_Z9YLmiMUQ29SPh4Jm8mkI4UX3DmF-4Utt9D5zdh5fMc0loPvR0CePL23CQ9u8rggCzkped_tdwWr9mfMplTedbCgaoUEmKxRDwirCJ_vmGwJ1DGwLjfIy4Q"/>
-</div>
-<div class="p-md flex-1 flex flex-col">
-<div class="flex gap-2 mb-sm flex-wrap">
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">SHOOTER</span>
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">MULTI</span>
-</div>
-<h3 class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors">Void Vanguard</h3>
-<p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">Engage in zero-gravity tactical combat across shattered orbital stations.</p>
-</div>
-</article>
-<!-- Game Card 4 -->
-<article class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col">
-<div class="relative aspect-video overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sleek, aerodynamic futuristic racing vehicle speeding through a neon-lit tunnel. Bright streaks of light conveying intense speed, dark metallic textures reflecting cyan and blue lights, high-octane energy, photorealistic rendering style, cinematic camera angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3aQQWPapFmbjghOyUppB-0n2Jah1vvcX2GazMlNTu_OQl4BxLM990EATwvs_goCtmdlFRG7gMTd6CRS8JkLVvAmW916dNg57YDX2n1Y70FOrkYdVjPFhn65NIXosS_YQoo8ZozlAk3udmKjYhLSVoazUpi9-yJTxrZas9LhwJNhcJzSBW0yAEJ66mUYGdsWpSnCRHhFcUcfkMIrsuIwYUfz78_65QrvUNwIDZ20UvsstFOLVM7rEnpw"/>
-</div>
-<div class="p-md flex-1 flex flex-col">
-<div class="flex gap-2 mb-sm flex-wrap">
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">RACING</span>
-<span class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20">VR</span>
-</div>
-<h3 class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors">Velocity Shift</h3>
-<p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">Push past the speed of sound in hyper-magnetic tracks spanning dystopian megacities.</p>
-</div>
-</article>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest w-full py-xl border-t border-outline-variant flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter flat no shadows">
-<div class="font-headline-md text-headline-md font-bold text-on-surface">
-            GLITCH_CORE
-        </div>
-<div class="flex gap-lg">
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
-</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant">
-            © 2024 GLITCH_CORE. ALL RIGHTS RESERVED.
-        </div>
-</footer>
-<script>
-        // Simple nav background transition on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('main-nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-surface/90', 'shadow-lg');
-                nav.classList.remove('bg-transparent');
-            } else {
-                nav.classList.remove('bg-surface/90', 'shadow-lg');
-                nav.classList.add('bg-transparent');
-            }
-        });
+          </div>
+        </article>
+        <!-- Game Card 2 -->
+        <article
+          class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col"
+        >
+          <div class="relative aspect-video overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="A sprawling alien landscape with monolithic ancient ruins, glowing energy lines cutting through the dark rock. Atmospheric mist rolling over the terrain, dramatic lighting from a distant twin suns, epic sci-fi exploration mood, detailed surface textures, moody and cinematic composition."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSDueuOFJfsZb4OqwYI8NunUu1DQ5Zc0Cx_b8qMThnqzRaXHPKJDJVgeuTIHdJgXThy7aPPxEl7SLtsjrEUNSkPNdyPtwLjf-9_DOxBD1NQ6cbpQwvVqPTunwumm3Vca-CC0oGNUxb6kmKv61r8LZUdmPiowjdKfl2zaIKQ8-OrmARVyBHQsgLp5ypahm4L_AgS48kskKar5UuL3LWyHAsyi6QUiYWSza-XNFi93w1GPEvJL-oVgJ8eg"
+            />
+          </div>
+          <div class="p-md flex-1 flex flex-col">
+            <div class="flex gap-2 mb-sm flex-wrap">
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >RPG</span
+              >
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >CONSOLE</span
+              >
+            </div>
+            <h3
+              class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors"
+            >
+              Echoes of Aethel
+            </h3>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">
+              Discover the lost secrets of an ancient civilization in this
+              sprawling open-world adventure.
+            </p>
+          </div>
+        </article>
+        <!-- Game Card 3 -->
+        <article
+          class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col"
+        >
+          <div class="relative aspect-video overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="Intense first-person view of a futuristic space battle from inside a sleek cockpit. Glowing HUD elements in cyan and blue, dark space background with stars, dynamic motion blur, high-tech controls, immersive action-packed aesthetic, detailed mechanical design."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFcGp96LTnDQN7cUFvl5WX3Pfzbs3dKYFs89h4bzQPi67lxvttNKKUeMJ4EaEZ-mO5UWwag4wenFjPXqiVso71hUbjGVNz-lvVezsGUn_Xv0mK-Ai10Uf0yCAgVriliG_Z9YLmiMUQ29SPh4Jm8mkI4UX3DmF-4Utt9D5zdh5fMc0loPvR0CePL23CQ9u8rggCzkped_tdwWr9mfMplTedbCgaoUEmKxRDwirCJ_vmGwJ1DGwLjfIy4Q"
+            />
+          </div>
+          <div class="p-md flex-1 flex flex-col">
+            <div class="flex gap-2 mb-sm flex-wrap">
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >SHOOTER</span
+              >
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >MULTI</span
+              >
+            </div>
+            <h3
+              class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors"
+            >
+              Void Vanguard
+            </h3>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">
+              Engage in zero-gravity tactical combat across shattered orbital
+              stations.
+            </p>
+          </div>
+        </article>
+        <!-- Game Card 4 -->
+        <article
+          class="bg-surface-container-high rounded-xl border border-outline-variant overflow-hidden group hover:-translate-y-2 hover:drop-shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300 cursor-pointer flex flex-col"
+        >
+          <div class="relative aspect-video overflow-hidden">
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="A sleek, aerodynamic futuristic racing vehicle speeding through a neon-lit tunnel. Bright streaks of light conveying intense speed, dark metallic textures reflecting cyan and blue lights, high-octane energy, photorealistic rendering style, cinematic camera angle."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3aQQWPapFmbjghOyUppB-0n2Jah1vvcX2GazMlNTu_OQl4BxLM990EATwvs_goCtmdlFRG7gMTd6CRS8JkLVvAmW916dNg57YDX2n1Y70FOrkYdVjPFhn65NIXosS_YQoo8ZozlAk3udmKjYhLSVoazUpi9-yJTxrZas9LhwJNhcJzSBW0yAEJ66mUYGdsWpSnCRHhFcUcfkMIrsuIwYUfz78_65QrvUNwIDZ20UvsstFOLVM7rEnpw"
+            />
+          </div>
+          <div class="p-md flex-1 flex flex-col">
+            <div class="flex gap-2 mb-sm flex-wrap">
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >RACING</span
+              >
+              <span
+                class="bg-primary-container/10 text-primary px-2 py-0.5 rounded-full text-xs font-label-sm border border-primary-container/20"
+                >VR</span
+              >
+            </div>
+            <h3
+              class="font-bold text-lg mb-xs text-on-surface group-hover:text-primary transition-colors"
+            >
+              Velocity Shift
+            </h3>
+            <p class="text-on-surface-variant text-sm line-clamp-2 mt-auto">
+              Push past the speed of sound in hyper-magnetic tracks spanning
+              dystopian megacities.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-lowest w-full py-xl border-t border-outline-variant flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter flat no shadows"
+    >
+      <div class="font-headline-md text-headline-md font-bold text-on-surface">
+        GLITCH_CORE
+      </div>
+      <div class="flex gap-lg">
+        <a
+          class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+          href="#"
+          >Privacy Policy</a
+        >
+        <a
+          class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+          href="#"
+          >Terms of Service</a
+        >
+        <a
+          class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+          href="#"
+          >Support</a
+        >
+        <a
+          class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors"
+          href="#"
+          >Contact</a
+        >
+      </div>
+      <div class="font-label-sm text-label-sm text-on-surface-variant">
+        © 2024 GLITCH_CORE. ALL RIGHTS RESERVED.
+      </div>
+    </footer>
+    <script>
+      // Simple nav background transition on scroll
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("main-nav");
+        if (window.scrollY > 50) {
+          nav.classList.add("bg-surface/90", "shadow-lg");
+          nav.classList.remove("bg-transparent");
+        } else {
+          nav.classList.remove("bg-surface/90", "shadow-lg");
+          nav.classList.add("bg-transparent");
+        }
+      });
     </script>
-</body></html>
+  </body>
+</html>
