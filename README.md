@@ -28,6 +28,7 @@ Link de la documentación https://www.freetogame.com/api-doc
 
 ## Como correrlo en local
 
+npm ci
 npm run dev
 
 ## Decisiones
